@@ -764,7 +764,7 @@ section {
   background-color: #0563bb;
 }
 
-.portfolio-details img.resize {
+/* .portfolio-details img.resize {
   max-width:80%;
   max-height:80%;
   height: 80%;
@@ -772,6 +772,12 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+} */
+
+img{
+  max-width:700px;
+  max-height:450px;
+  object-fit: contain;
 }
 
 @media (max-width: 575px) {
