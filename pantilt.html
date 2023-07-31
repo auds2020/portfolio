@@ -25,6 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -42,7 +43,6 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/2.679/IMG_7137.jpg" alt="">
                 </div>
@@ -68,74 +68,74 @@
             <div class="portfolio-info">
               <h3>Pan-tilt face tracking gimbal with audio functionality</h3>
               <ul>
-                <!-- <li><strong>Category</strong>: Web design</li> -->
-                <!-- <li><strong>Client</strong>: ASU Company</li> -->
-                <li><strong>Term</strong>: Spring 2023</li>
-                <!-- <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li> -->
+                <li><strong>Category</strong>Class project</li>
+                <li><strong>Project date</strong>Spring 2023</li>
+                <li><strong>Skills required</strong>Design, manufacturing, CAD</li>
+                <!-- <li><a href="http://arcturus.mit.edu/" class="btn-visit align-self-start">Visit Website</a></li> -->
               </ul>
             </div>
-            <div class="portfolio-description">
-              <h2>About this project</h2>
-              <p>
-                For my final project for 2.679, Electronics for Mechanical Systems II, I wanted to 
-                implement what I had learned in computer vision into a pan-tilt gimbal that does 
-                face tracking. Eventually, we hope to integrate this system into a full-scale WALL-E
-                 robot during our senior year. The hope is that WALL-E would be able to run around 
-                 and follow a given person. 
-              </p>
-              <p>
-                I first built a pan tilt gimbal using two servos and brackets, which I then mounted 
-                to an acrylic plate. I attached a camera to the top of the gimbal using a laser cut 
-                acrylic piece. The main “brains” of my system is a Raspberry Pi 4 and my custom PCB
-                 shield. The PCB allows me to directly plug in my servos into the Pi since the board
-                  also pulls the two PWM pins and ground to the header. 
-              </p>
-              <p>
-                I also added several ports for buttons to control audio playback. There were 5 ports 
-                in total, for record, pause, play, solar, and an extra button, as seen in the movie.
-                 I vinyl cut some stickers to add to my momentary switches to make the labeling clear,
-                  and embedded each of the switches into an acrylic control board. 
-              </p>
-              <p>
-                Importantly, I wanted the entire system to be powered remotely without needing to remain
-                 plugged into the wall. There are existing modules such as PyJuice you can purchase, 
-                 but this would mechanically interfere with my custom PCB (and they’re also pretty 
-                 expensive), so I thought I might as well integrate it into the PCB directly. In order
-                  to do so, I added a zero voltage diode and port for a Pololu step down converter, so
-                   the system could be powered off of AA batteries. The buck converter would convert 
-                   the 9 V to 5 V and also provide ports for 5 V and ground to power a touchscreen. This
-                    touch screen would enable people to play infinite songs, and in future iterations,
-                     display battery life of WALL-E.
-              </p>
-              <p>
-                On the software end, this system makes use of open CV2. When the camera sees a person,
-                 it rotates the servos to try its best to keep the face in the center of the frame. If
-                  a face isn’t detected for a while, it goes into discovery mode and will start looking
-                   around in search of one. In the event it sees multiple faces, it will try to move to 
-                   the average center of all the faces. This was nontrivial to program, and took me a 
-                   long time to tune. 
-              </p>
-              <p>
-                For audio playback, I found it was pretty tricky to implement recording for an unknown 
-                time, since most existing libraries have you specify the time to record when you call
-                 the function. Instead I got around this by ???
-              </p>
-              <p>
-                I also realized that though the movie shows the record button as a momentary switch
-                 (one which stays on until you press it again), it probably made the most sense to 
-                 have the stop and play buttons be on/off switches. 
-              </p>
-              <p>
-                Lastly, I needed to learn how to SSH into the Pi since otherwise I’d have no way to 
-                remotely trigger my program. 
-              </p>
-              <p>
-                Overall, this project was a whole lot of fun. It’s my first computer vision project, 
-                and I had a ton of fun with the controls and playback!
-              </p>
-            </div>
           </div>
-
+          <div class="portfolio-description">
+            <h2>About this project</h2>
+            <p>
+              For my final project for 2.679, Electronics for Mechanical Systems II, I wanted to 
+              implement what I had learned in computer vision into a pan-tilt gimbal that does 
+              face tracking. Eventually, we hope to integrate this system into a full-scale WALL-E
+               robot during our senior year. The hope is that WALL-E would be able to run around 
+               and follow a given person. 
+            </p>
+            <p>
+              I first built a pan tilt gimbal using two servos and brackets, which I then mounted 
+              to an acrylic plate. I attached a camera to the top of the gimbal using a laser cut 
+              acrylic piece. The main “brains” of my system is a Raspberry Pi 4 and my custom PCB
+               shield. The PCB allows me to directly plug in my servos into the Pi since the board
+                also pulls the two PWM pins and ground to the header. 
+            </p>
+            <p>
+              I also added several ports for buttons to control audio playback. There were 5 ports 
+              in total, for record, pause, play, solar, and an extra button, as seen in the movie.
+               I vinyl cut some stickers to add to my momentary switches to make the labeling clear,
+                and embedded each of the switches into an acrylic control board. 
+            </p>
+            <p>
+              Importantly, I wanted the entire system to be powered remotely without needing to remain
+               plugged into the wall. There are existing modules such as PyJuice you can purchase, 
+               but this would mechanically interfere with my custom PCB (and they’re also pretty 
+               expensive), so I thought I might as well integrate it into the PCB directly. In order
+                to do so, I added a zero voltage diode and port for a Pololu step down converter, so
+                 the system could be powered off of AA batteries. The buck converter would convert 
+                 the 9 V to 5 V and also provide ports for 5 V and ground to power a touchscreen. This
+                  touch screen would enable people to play infinite songs, and in future iterations,
+                   display battery life of WALL-E.
+            </p>
+            <p>
+              On the software end, this system makes use of OpenCV2. When the camera sees a person,
+               it rotates the servos to try its best to keep the face in the center of the frame. If
+                a face isn’t detected for a while, it goes into discovery mode and will start looking
+                 around in search of one. In the event it sees multiple faces, it will try to move to 
+                 the average center of all the faces. This was nontrivial to program, and took me a 
+                 long time to tune. 
+            </p>
+            <p>
+              For audio playback, I found it was pretty tricky to implement recording for an unknown 
+              time, since most existing libraries have you specify the time to record when you call
+               the function. Instead I got around this by ???
+            </p>
+            <p>
+              I also realized that though the movie shows the record button as a momentary switch
+               (one which stays on until you press it again), it probably made the most sense to 
+               have the stop and play buttons be on/off switches. 
+            </p>
+            <p>
+              Lastly, I needed to learn how to SSH into the Pi since otherwise I’d have no way to 
+              remotely trigger my program. 
+            </p>
+            <p>
+              Overall, this project was a whole lot of fun. It’s my first computer vision project, 
+              and I had a ton of fun with the controls and playback!
+            </p>
+              </div>
+          </div>
         </div>
       </div>
 
