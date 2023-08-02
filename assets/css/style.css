@@ -296,8 +296,9 @@ h6 {
 
 @media screen and (max-width: 480px) {
   .pc-img {
-    background: url("../img/mobile.JPG");
-    object-fit: scale-down;
+    /* background: url("../img/mobile.JPG");
+    object-fit: scale-down; */
+    background: purple;
     }
 }
 
