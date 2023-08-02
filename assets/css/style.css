@@ -288,7 +288,8 @@ h6 {
 
 @media screen and (max-width: 480px){
   #hero {
-    background:url("../img/mobile.JPG") !important;
+    background: none;
+    /* background:url("../img/mobile.JPG") !important; */
   }
 }
 
