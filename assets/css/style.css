@@ -296,7 +296,8 @@ h6 {
 
 @media screen and (max-width: 480px) {
   .pc-img {
-    background: url("../img/mobile.JPG") top right no-repeat;
+    background: url("../img/mobile.JPG");
+    object-fit: cover;
     }
 }
 
