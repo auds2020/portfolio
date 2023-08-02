@@ -291,12 +291,12 @@ h6 {
   }
 }
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
+@media (min-width: 100px) and (max-width: 480px) {
   #hero {
     background: url("../img/mobile.JPG") top right no-repeat;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   #hero {
     background: url("../img/hero-bg.JPG") top right no-repeat;
   }
