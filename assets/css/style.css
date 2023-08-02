@@ -292,12 +292,12 @@ h6 {
 }
 
 @media screen and (min-width: 100px) and (max-width: 480px) {
-  .pc-img {
+  #hero {
     background: url("../img/mobile.JPG") top right no-repeat;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .pc-img {
+  #hero {
     background: url("../img/hero-bg.JPG") top right no-repeat;
   }
 }
