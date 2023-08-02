@@ -286,20 +286,10 @@ h6 {
   position: relative;
 }
 
-/* @media (min-width: 992px) {
+@media screen and (max-width: 480px){
   #hero {
-    padding-left: 160px;
-    background: url("../img/mobile.JPG") top right no-repeat;
+     background-image:url("../img/mobile.JPG") !important;
   }
-} */
-
-
-@media screen and (max-width: 480px) {
-  .pc-img {
-    /* background: url("../img/mobile.JPG");
-    object-fit: scale-down; */
-    background: purple;
-    }
 }
 
 #hero:before {
