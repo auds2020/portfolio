@@ -296,9 +296,10 @@ h6 {
     }
 } */
 
-@media screen and (min-width: 100px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #hero {
-    background: purple;
+    background: url("../img/mobile.JPG");
+    object-fit: scale-down;
   }
 }
 
