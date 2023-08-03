@@ -117,18 +117,16 @@
                  long time to tune. 
             </p>
             <p>
+              In order to detect when buttons were pressed and relased, I used <a href='https://gpiozero.readthedocs.io/en/stable/'>gpiozero's button function</a>. 
               For audio playback, I found it was pretty tricky to implement recording for an unknown 
               time, since most existing libraries have you specify the time to record when you call
-               the function. Instead I got around this by ???
+               the function. To get around this, I needed to use the non-blocking streaming version of PyAudio 
+               using <a href='https://people.csail.mit.edu/hubert/pyaudio/docs/'>callback functions</a>. I also used <a href='https://www.pygame.org/docs/ref/mixer.html'>pygame mixer</a> 
+               to do something similar for audio playback, where the sound is only played repeatedly until the button is released. 
+               If multiple buttons are pressed at once, then they overlay one another. 
             </p>
             <p>
-              I also realized that though the movie shows the record button as a momentary switch
-               (one which stays on until you press it again), it probably made the most sense to 
-               have the stop and play buttons be on/off switches. 
-            </p>
-            <p>
-              Lastly, I needed to learn how to SSH into the Pi since otherwise I’d have no way to 
-              remotely trigger my program. 
+              Lastly, I needed to learn how to SSH into the Pi so I wouldn't need to be connected to the Pi with my laptop at all times.
             </p>
             <p>
               Overall, this project was a whole lot of fun. It’s my first computer vision project, 
