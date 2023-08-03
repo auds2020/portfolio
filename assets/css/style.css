@@ -287,22 +287,22 @@ h6 {
   background-size: cover;
   position: relative;
 }
-
+/* 
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
     background: url("../img/mobile.JPG") top right no-repeat;
     object-fit: scale-down;
   }
-}
+} */
 
 
-/* @media screen and (max-width: 480px) {
-  .pc-img {
+@media screen and (max-width: 480px) {
+  #hero {
     background: url("../img/mobile.JPG");
     object-fit: scale-down;
     }
-} */
+}
 
 #hero:before {
   content: "";
