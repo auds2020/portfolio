@@ -288,17 +288,10 @@ h6 {
   position: relative;
 }
 
-/* 
-@media screen and (max-width: 480px) {
-  #hero {
-    background: url("../img/mobile.JPG");
-    object-fit: scale-down;
-    }
-} */
-
 @media screen and (min-width: 100px) and (max-width: 480px) {
   #hero {
-    background: url("../img/mobile.JPG") center contain;
+    background: url("../img/mobile.JPG") top right no-repeat;
+    background-size: contain;
     /* background: purple */
     /* object-fit: scale-down; */
   }
