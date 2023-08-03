@@ -290,10 +290,8 @@ h6 {
 
 @media screen and (min-width: 100px) and (max-width: 480px) {
   #hero {
-    background: url("../img/mobile.JPG") top right no-repeat;
+    background: url("../img/mobile2.JPG") top right no-repeat;
     background-size: contain;
-    /* background: purple */
-    /* object-fit: scale-down; */
   }
 }
 
