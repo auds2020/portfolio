@@ -298,7 +298,7 @@ h6 {
 
 @media screen and (min-width: 100px) and (max-width: 480px) {
   #hero {
-    background: url("../img/mobile.JPG") center scale-down;
+    background: url("../img/mobile.JPG") center;
     /* background: purple */
     /* object-fit: scale-down; */
   }
