@@ -248,7 +248,7 @@ h6 {
   top: 10px;
   z-index: 9998;
   border: 0;
-  background: none;
+  /* background: none; */
   font-size: 28px;
   transition: all 0.4s;
   outline: none !important;
@@ -256,7 +256,8 @@ h6 {
   cursor: pointer;
   border-radius: 50px;
   padding: 5px;
-  color: #d7d7d7;
+  color: #45505b;
+  background: #d7d7d7;
 }
 
 .mobile-nav-toggle i {
@@ -287,20 +288,21 @@ h6 {
   position: relative;
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   #hero {
     padding-left: 160px;
     background: url("../img/mobile.JPG") top right no-repeat;
+    object-fit: scale-down;
   }
-} */
+}
 
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .pc-img {
     background: url("../img/mobile.JPG");
     object-fit: scale-down;
     }
-}
+} */
 
 #hero:before {
   content: "";
