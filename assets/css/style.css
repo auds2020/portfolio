@@ -541,7 +541,8 @@ section {
 
 @media screen and (min-width: 100px) and (max-width: 600px) {
   .resume .resume-item{
-    margin-left: 20px
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
