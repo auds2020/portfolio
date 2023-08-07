@@ -1335,3 +1335,25 @@ img{
 #footer .credits {
   font-size: 13px;
 }
+
+/*--------------------------------------------------------------
+# 3d
+--------------------------------------------------------------*/
+
+#aSide {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: calc(50% - 250px);
+  right: 7%;
+}
+
+/* This styles the 3D object inserted in the aside container */
+#aSide model-viewer {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+}
