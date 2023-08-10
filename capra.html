@@ -48,11 +48,15 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/unimelb/omr.jpg" alt="">
+                  <img src="assets/img/portfolio/capra/DSC00757.JPG" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/unimelb/smiley.jpg" alt="">
+                  <img src="assets/img/portfolio/capra/DSC00769.JPG" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/capra/grapes.jpg" height=400px alt="">
                 </div>
 
               </div>
@@ -66,7 +70,7 @@
               <ul>
                 <li><strong>Category</strong>Internship</li>
                 <li><strong>Project date</strong>Summer 2023</li>
-                <li><strong>Skills required</strong>Design, CAD, programming in ROS2</li>
+                <li><strong>Skills required</strong>Design, CAD, programming in ROS2, electronics</li>
                 <!-- <li><a href="http://arcturus.mit.edu/" class="btn-visit align-self-start">Visit Website</a></li> -->
               </ul>
             </div>
@@ -74,47 +78,65 @@
           <div class="portfolio-description">
             <h2>About this project</h2>
             <p>
-              During the summer of 2022, I worked at the University of Melbourne’s robotics lab on 
-              their mobile robot system as a part of MISTI-Australia (MIT’s international study/work
-               abroad program). We built a driven car with a robotic arm attached for construction
-                applications. The purpose of our research was to investigate how robots, and more 
-                specifically mobile robots which can go around the site, might help in construction
-                 applications. 
-            </p>
-            <!-- <iframe scrolling='no' frameborder='0' allowfullscreen='true' src='https://www.3dcontentcentral.com/external-site-embed.aspx?format=3D&catalogid=171&modelid=2234887&width=250&height=250&edraw=true' name='PreviewFrame3D' id='PreviewFrame3D' width='400' height='355'></iframe><br/> -->
-            <!-- <model-viewer alt="" src="assets/3d/ImageToStl.com_auds_twist.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>             -->
-            <p>
-              At the start of my internship, I helped finish up the build of the mobile robot itself 
-              and made it safe for the public. I then helped program the robot’s path-planning and arm
-               motion, making sure that the robot could navigate the space and perform tasks using its
-                attached arm. At the end of my visit, we demoed the robot building gardening boxes at
-                 the university’s Open Day!
+              This summer, I had the opportunity to intern at Capra Robotics, an outdoor mobile robot 
+              startup company in Aarhus, Denmark! We built a gimbal and lift for a hyperspectral camera
+               to go on top of the robot. The idea is that the mobile robot could drive through orchards
+                or vineyards at night, when nobody is around, and then take pictures of the fruit and 
+                use GNSS to tag each plant. This would let farmers know if they are ripe or have signs
+                 of mold or disease so they would know which crops need more attention or need to be 
+                 removed. 
             </p>
             <p>
-              I took a few programming classes at MIT, which were definitely foundational in my 
-              programming journey here. Without this basis, it would’ve been a real struggle for 
-              me to get any real progress done on my project while also learning ROS, a new programming
-               language I’ve never worked with before. It was a big jump for me to go from plug-and-play
-                electronics to wiring and programming robotic systems from scratch. I learned a ton 
-                about applying packages and transforming existing code to suit your needs. I also have
-                 never really worked much in simulation before, so it was really cool to see my robot’s
-                  digital twin on the computer to verify the real robot’s behavior. This simulation 
-                  element was super important since the robot itself isn’t something you’d want 
-                  behaving unexpectedly; after all, the entire robot weighs well over 300 kilograms!
+              I worked on electronics, controls, and programming of the gimbal, as well as fabrication 
+              and assembly of both the lift and gimbal. I also created a ROS2 node to enable serial 
+              connection to the gimbal motors, which would output encoder and IMU values and enable 
+              positional control. Because our internship was only 8 weeks, we designed everything to be 
+              3D printed or purchased off-the-shelf. This added a unique challenge to designing and manufacturing 
+              our project, since the camera itself wasn't light, and it'd move quite a lot while driving.
             </p>
             <p>
-              This was by far the largest project I’d ever worked on. It forced me to think about the
-               pragmatic bits of engineering — adding emergency stops, reducing noise, adding safety 
-               features when people are detected. In this way, I learned that my designs never really
-                operate in a vacuum, and that the harsh reality of building a project from start to 
-                finish is a whole lot of Googling and troubleshooting. This experience taught me what
-                 it takes to build such a large project from scratch in collaboration with others. It
-                  was an awesome experience working at the Melbourne School of Design, and I can’t wait
-                   to take the skills I’ve learned to my next class or job.
+              Our gimbal could move in the pitch and yaw, allowing the camera to aim at targets. Because sunlight would 
+              interfere with our hyperspectral images, we decided to deploy the robot at night, so it needed to have lights 
+              mounted on-board to light the fruits. Because the field of view of the hyperspectral camera was so small, we 
+              also decided to add a Realsense RGB depth camera so that the robot would be able to "see" more before narrowing in on a bunch of grapes. 
+              We also added several interesting elements to our design to improve its stability, protect its electronics and lenses, and make 
+              controls as easy as possible. Click around below to see them all!
             </p>
             <p>
-              Participating in a MISTI exchange was an incredible opportunity to both learn technical 
-              skills and experience a culture away from home.
+              The vertical lift was made of a linkage system controlled by a linear actuator. 
+              The holes in the 40x40 aluminum extrusions and flat plate aluminum were milled to ensure 
+              colinearity. The black pieces are 3D-printed at high infill (80% to 100%) to improve 
+              rigidity. Finally, the entire assembly is mounted to a wooden plate and onto the robot’s 
+              cover. In order to control the lift from the remote control, we use a 2-channel 
+              switch connected to the receiver, which we can then use to trigger the linear actuator
+               using its controller. The height of the whole assembly could be reported back using a potentiometer
+                attatched to the lift via linkages.
+            </p>
+            <div class="sketchfab-embed-wrapper"> <iframe title="Lift" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/aaebdf8631ef46748ad2064846b9bd61/embed"> </iframe> </div>
+            <p>
+              In order to power it all, we pulled power from the robot itself, taking care that the overall power draw of all the devices running 
+              simulataneously wouldn't overload it. We had two DC-DC converters: one which would always be on as long as the robot was on, and one "safe power" 
+              which would turn off when you hit the emergency stop. 
+            </p>
+            <p>
+              At the end of our internship, we went to Kimesbjerggaard Vingård, a vineyard in the 
+              countryside, to test our robot! We were able to remote control the robot, gimbal, and
+               lift successfully and take some photos. This is a visualization of the hyperspectral data. 
+               The eight images you see radially are the first-order diffractions, and the middle one is the weighted average of these diffractions.
+            </p>
+            <img src="assets/img/portfolio/capra/grapes.jpg" height=300px alt="">
+            <p>
+              Working at Capra Robotics was an amazing opportunity to try out working at a startup 
+              and explore a new country. I was able to guide my own project and move at my own pace,
+               applying my knowledge of electronics, programming, and mechanical engineering all at 
+               the same time. It was a great combination of things within my comfort zone that I had
+                prior experience with and new things I’d never done before. Capra was great at giving 
+                us help with elements we were unsure about and plenty of freedom to guide our own project. 
+            </p>
+            <p>
+              I really enjoyed living in Denmark, which was a wonderful change of pace with beautiful 
+              scenery. It was awesome to explore Aarhus with its well-connected public transport. I 
+              definitely understand why it’s one of the happiest countries in the world!
             </p>
           </div>
         </div>

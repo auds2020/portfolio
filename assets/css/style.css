@@ -1340,7 +1340,23 @@ img{
 # 3d
 --------------------------------------------------------------*/
 
-#sketchfab-embed-wrapper {
+/* #sketchfab-embed-wrapper {
   height: 600px;
   width: 600px;
+} */
+
+.sketchfab-embed-wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio*/
+}
+.sketchfab-embed-wrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
