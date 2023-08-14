@@ -792,6 +792,10 @@ img{
   object-fit: contain;
 }
 
+right-mar{
+  margin-right: 20px;
+}
+
 @media (max-width: 575px) {
 
   .portfolio-details .swiper-button-prev,

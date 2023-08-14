@@ -81,70 +81,85 @@
           </div>
           <div class="portfolio-description">
             <h2>About this project</h2>
-              <p>
-                For 2.007, Design and Manufacturing I, students are tasked with building a 12”x12”x16”
-                 robot capable of scoring as many points as possible on a game board. All components
-                  are manufactured from raw stock of aluminum and delrin, teaching students skills such as turning on a lathe, milling, tapping, circuits, and drill pressing.
-              </p>
-              <p>
-                The robot is driven by two speed servos in continuous mode. When plugged into an RC 
-                communicator, these can be remotely controlled via skid steering.  
-              </p>
-              <p>To ensure a tight turn radius for maneuverability, I turned two delrin nubs on the
-                 lathe. Unlike wheels, which skid around, these nubs would scoot along the floor of 
-                 the game board with low friction, enabling the robot to turn in place.
-              </p>
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <p>
+                  For 2.007, Design and Manufacturing I, students are tasked with building a 12”x12”x16”
+                  robot capable of scoring as many points as possible on a game board. All components
+                    are manufactured from raw stock of aluminum and delrin, teaching students skills such as turning on a lathe, milling, tapping, circuits, and drill pressing.
+                </p>
+                <p>
+                  The robot is driven by two speed servos in continuous mode. When plugged into an RC 
+                  communicator, these can be remotely controlled via skid steering.  
+                </p>
+                <p>To ensure a tight turn radius for maneuverability, I turned two delrin nubs on the
+                  lathe. Unlike wheels, which skid around, these nubs would scoot along the floor of 
+                  the game board with low friction, enabling the robot to turn in place.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <!-- <div class="sketchfab-embed-wrapper"> <iframe title="My skull" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4744fd8a5ed548cb82623fd6766bb039/embed"> </iframe> </div> -->
 
-              <video controls="controls" height="400" muted>
-                <source src="assets/img/portfolio/2.007/IMG_9790.mp4">
-              </video>
+                <video controls="controls" height="300" muted>
+                  <source src="assets/img/portfolio/2.007/IMG_9790.mp4">
+                </video>
+              </div>
+            </div>
 
-              <p>
-                My biggest module was a linear sliding lift which completed the “beaver lift” task worth 
-                the most points. For my first prototype of this module, I developed a belt system linking
-                 several linear slides. These slides were produced by cutting slots into box aluminum, 
-                 and fitting milled delrin sliders inside the slots. The delrin had tapped holes which
-                  allowed me to mount the delrin to one of the aluminum bars, while allowing the other
-                   bar to slide by freely. Deburring the aluminum sliders and testing tolerances were key 
-                   in this design process to get the prototype sliding properly. This was my first time
-                    machining for a larger project, and I had a great time with it, working long nights
-                     in shop.
-              </p>
+            <div class="row gy-4">
 
-              <video controls="controls" height="400" muted>
-                <source src="assets/img/portfolio/2.007/IMG_9762.MOV">
-              </video>
-              <p>
-                Though this system was very fast at lifting, I eventually changed my design due to issues
-                 skipping on the timing pulleys despite my efforts to tension the belts. My new design, 
-                 however, took advantage of the majority of the parts I had machines for the slides 
-                 themselves.
-              </p>
-              <p>
-                My new lift design was a continuous lift using strings attached to a winch. As the winch
-                 was wound by a high torque motor, the string would shorten, raising the lift. Using the
-                  speed-torque curves for each available motor, I was able to maximize the speed at which
-                   the heavy beaver could be lifted, which was important since additional points were 
-                   granted for accomplishing tasks first and the rounds were only 2.5 minutes long. 
-              </p>
-              <p>
-                I also wanted to be able to push both the upper and lower buttons on the game board 
-                using my lift, but since I planned on executing the beaver lift first to maximize points,
-                 this meant I also needed the lift to be able to lower back down. In order to accomplish
-                  this, I attached rubber bands between each set of slides. The rubber bands would pull
-                   each slider towards one another, getting rid of any slack in the string and compressing
-                    the lift. That way, when the servos were spun the other way, the string would feed 
-                    back in and the lift would lower.
-              </p>
-              <p>
-                In order to support the lift, I created a baseplate below the main chassis of my vehicle.
-                 By inlaying the lift inside the chassis, this lowered the center of mass of the vehicle,
-                  which would improve stability on turns and prevent tipping on the ramp. Nonetheless, 
-                  because the lift is inherently top-heavy, I found it was necessary to add fins to the 
-                  base of the robot to act as a “foot” when climbing the ramp. This extended overall 
-                  footprint of the robot, which prevented it from tipping backwards. If you're curious about the math 
-                  behind this, feel to take a look at my long and boring calculations here. ???
-              </p>
+              <div class="col-lg-6">
+                <p>
+                  My biggest module was a linear sliding lift which completed the “beaver lift” task worth 
+                  the most points. For my first prototype of this module, I developed a belt system linking
+                  several linear slides. These slides were produced by cutting slots into box aluminum, 
+                  and fitting milled delrin sliders inside the slots. The delrin had tapped holes which
+                    allowed me to mount the delrin to one of the aluminum bars, while allowing the other
+                    bar to slide by freely. Deburring the aluminum sliders and testing tolerances were key 
+                    in this design process to get the prototype sliding properly. This was my first time
+                      machining for a larger project, and I had a great time with it, working long nights
+                      in shop.
+                </p>
+                <p>
+                  Though this system was very fast at lifting, I eventually changed my design due to issues
+                  skipping on the timing pulleys despite my efforts to tension the belts. My new design, 
+                  however, took advantage of the majority of the parts I had machines for the slides 
+                  themselves.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <video controls="controls" height="400" muted>
+                  <source src="assets/img/portfolio/2.007/IMG_9762.MOV">
+                </video>
+              </div>
+            </div>
+
+            <p>
+              My new lift design was a continuous lift using strings attached to a winch. As the winch
+              was wound by a high torque motor, the string would shorten, raising the lift. Using the
+                speed-torque curves for each available motor, I was able to maximize the speed at which
+                the heavy beaver could be lifted, which was important since additional points were 
+                granted for accomplishing tasks first and the rounds were only 2.5 minutes long. 
+            </p>
+            <p>
+              I also wanted to be able to push both the upper and lower buttons on the game board 
+              using my lift, but since I planned on executing the beaver lift first to maximize points,
+              this meant I also needed the lift to be able to lower back down. In order to accomplish
+                this, I attached rubber bands between each set of slides. The rubber bands would pull
+                each slider towards one another, getting rid of any slack in the string and compressing
+                  the lift. That way, when the servos were spun the other way, the string would feed 
+                  back in and the lift would lower.
+            </p>
+
+            <p>
+              In order to support the lift, I created a baseplate below the main chassis of my vehicle.
+              By inlaying the lift inside the chassis, this lowered the center of mass of the vehicle,
+                which would improve stability on turns and prevent tipping on the ramp. Nonetheless, 
+                because the lift is inherently top-heavy, I found it was necessary to add fins to the 
+                base of the robot to act as a “foot” when climbing the ramp. This extended overall 
+                footprint of the robot, which prevented it from tipping backwards. If you're curious about the math 
+                behind this, feel to take a look at my long and boring calculations here. ???
+            </p>
               <video controls="controls" height="400" muted>
                 <source src="assets/img/portfolio/2.007/IMG_9792.MOV">
               </video>
