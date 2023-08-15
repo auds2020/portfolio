@@ -787,9 +787,25 @@ section {
   background-color: #0563bb;
 }
 
-img{
-  max-width:700px;
+video {
+  text-align: center;
   object-fit: contain;
+  max-height:450px;
+  display: block;
+  margin: auto;
+  max-width: 90%;
+}
+
+img{
+  max-height:450px;
+  max-width: 90%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.right-justify {
+  padding-left: 30%;
 }
 
 right-mar{
