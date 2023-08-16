@@ -798,7 +798,7 @@ video {
 
 img{
   max-height:450px;
-  max-width: 90%;
+  /* max-width: 90%; */
   object-fit: contain;
   display: block;
   margin: auto;
