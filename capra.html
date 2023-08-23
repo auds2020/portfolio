@@ -77,31 +77,41 @@
           </div>
           <div class="portfolio-description">
             <h2>About this project</h2>
-            <p>
-              This summer, I had the opportunity to intern at Capra Robotics, an outdoor mobile robot 
-              startup company in Aarhus, Denmark! We built a gimbal and lift for a hyperspectral camera
-               to go on top of the robot. The idea is that the mobile robot could drive through orchards
-                or vineyards at night, when nobody is around, and then take pictures of the fruit and 
-                use GNSS to tag each plant. This would let farmers know if they are ripe or have signs
-                 of mold or disease so they would know which crops need more attention or need to be 
-                 removed. 
-            </p>
-            <p>
-              I worked on electronics, controls, and programming of the gimbal, as well as fabrication 
-              and assembly of both the lift and gimbal. I also created a ROS2 node to enable serial 
-              connection to the gimbal motors, which would output encoder and IMU values and enable 
-              positional control. Because our internship was only 8 weeks, we designed everything to be 
-              3D printed or purchased off-the-shelf. This added a unique challenge to designing and manufacturing 
-              our project, since the camera itself wasn't light, and it'd move quite a lot while driving.
-            </p>
-            <p>
-              Our gimbal could move in the pitch and yaw, allowing the camera to aim at targets. Because sunlight would 
-              interfere with our hyperspectral images, we decided to deploy the robot at night, so it needed to have lights 
-              mounted on-board to light the fruits. Because the field of view of the hyperspectral camera was so small, we 
-              also decided to add a Realsense RGB depth camera so that the robot would be able to "see" more before narrowing in on a bunch of grapes. 
-              We also added several interesting elements to our design to improve its stability, protect its electronics and lenses, and make 
-              controls as easy as possible. Click around below to see them all!
-            </p>
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <p>
+                  This summer, I had the opportunity to intern at Capra Robotics, an outdoor mobile robot 
+                  startup company in Aarhus, Denmark! We built a gimbal and lift for a hyperspectral camera
+                  to go on top of the robot. The idea is that the mobile robot could drive through orchards
+                    or vineyards at night, when nobody is around, and then take pictures of the fruit and 
+                    use GNSS to tag each plant. This would let farmers know if they are ripe or have signs
+                    of mold or disease so they would know which crops need more attention or need to be 
+                    removed. 
+                </p>
+                <p>
+                  I worked on electronics, controls, and programming of the gimbal, as well as fabrication 
+                  and assembly of both the lift and gimbal. I also created a ROS2 node to enable serial 
+                  connection to the gimbal motors, which would output encoder and IMU values and enable 
+                  positional control. Because our internship was only 8 weeks, we designed everything to be 
+                  3D printed or purchased off-the-shelf. This added a unique challenge to designing and manufacturing 
+                  our project, since the camera itself wasn't light, and it'd move quite a lot while driving.
+                </p>
+                <p>
+                  Our gimbal could move in the pitch and yaw, allowing the camera to aim at targets. Because sunlight would 
+                  interfere with our hyperspectral images, we decided to deploy the robot at night, so it needed to have lights 
+                  mounted on-board to light the fruits. Because the field of view of the hyperspectral camera was so small, we 
+                  also decided to add a Realsense RGB depth camera so that the robot would be able to "see" more before narrowing in on a bunch of grapes. 
+                  We also added several interesting elements to our design to improve its stability, protect its electronics and lenses, and make 
+                  controls as easy as possible. Here's a video of me remote-controlling the camera!
+                </p>
+                </div>
+                <div class="col-lg-4">
+                  <!-- TODO ADD GIMBAL VIDEO -->
+                  <video controls="controls" muted>
+                    <source src="assets/img/portfolio/capra/IMG_8322.MP4">
+                  </video>
+                </div>
+            </div>
             <p>
               The vertical lift was made of a linkage system controlled by a linear actuator. 
               The holes in the 40x40 aluminum extrusions and flat plate aluminum were milled to ensure 
@@ -112,32 +122,66 @@
                using its controller. The height of the whole assembly could be reported back using a potentiometer
                 attatched to the lift via linkages.
             </p>
-            <div class="sketchfab-embed-wrapper"> <iframe title="Lift" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/aaebdf8631ef46748ad2064846b9bd61/embed"> </iframe> </div>
-            <p>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Lift" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/aaebdf8631ef46748ad2064846b9bd61/embed"> </iframe> </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Lift" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/aaebdf8631ef46748ad2064846b9bd61/embed"> </iframe> </div>
+              </div>
+            </div>
+              <p>
               In order to power it all, we pulled power from the robot itself, taking care that the overall power draw of all the devices running 
               simulataneously wouldn't overload it. We had two DC-DC converters: one which would always be on as long as the robot was on, and one "safe power" 
-              which would turn off when you hit the emergency stop. 
+              which would turn off when you hit the emergency stop. Elements which moved (the lift and gimbal) would be connected to the safe power so that they could be stopped 
+              in case of emergency. The linear actuator was driven by a controller with built-in overcurrent protection, so we designed mechanical stops for the lift. When the lift would 
+              go too high or too low, it would collide with the mechanical stops, thus causing a spike in current through the controller, causing it to shut off the linear actuator and 
+              prevent the lift from breaking itself. Meanwhile, the camera could be connected to the constant power since it wasn't actuated.
             </p>
-            <p>
-              At the end of our internship, we went to Kimesbjerggaard Vingård, a vineyard in the 
-              countryside, to test our robot! We were able to remote control the robot, gimbal, and
-               lift successfully and take some photos. This is a visualization of the hyperspectral data. 
-               The eight images you see radially are the first-order diffractions, and the middle one is the weighted average of these diffractions.
-            </p>
-            <img src="assets/img/portfolio/capra/grapes.jpg" height=300px alt="">
-            <p>
-              Working at Capra Robotics was an amazing opportunity to try out working at a startup 
-              and explore a new country. I was able to guide my own project and move at my own pace,
-               applying my knowledge of electronics, programming, and mechanical engineering all at 
-               the same time. It was a great combination of things within my comfort zone that I had
-                prior experience with and new things I’d never done before. Capra was great at giving 
-                us help with elements we were unsure about and plenty of freedom to guide our own project. 
-            </p>
-            <p>
-              I really enjoyed living in Denmark, which was a wonderful change of pace with beautiful 
-              scenery. It was awesome to explore Aarhus with its well-connected public transport. I 
-              definitely understand why it’s one of the happiest countries in the world!
-            </p>
+
+            <div class="row gy-4">
+              <div class="col-lg-4">
+                <video controls="controls" muted>
+                  <source src="assets/img/portfolio/capra/IMG_8322.MP4">
+                </video>
+              </div>
+              <div class="col-lg-4">
+                <video controls="controls" muted>
+                  <source src="assets/img/portfolio/capra/IMG_8323.MP4">
+                </video>
+              </div>
+              <div class="col-lg-4">
+                <video controls="controls" muted>
+                  <source src="assets/img/portfolio/capra/IMG_8328.MP4">
+                </video>
+              </div>
+            </div>
+
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <p>
+                  At the end of our internship, we went to Kimesbjerggaard Vingård, a vineyard in the 
+                  countryside, to test our robot! We were able to remote control the robot, gimbal, and
+                  lift successfully and take some photos. This is a visualization of the hyperspectral data. 
+                  The eight images you see radially are the first-order diffractions, and the middle one is the weighted average of these diffractions.
+                </p>
+                <p>
+                  Working at Capra Robotics was an amazing opportunity to try out working at a startup 
+                  and explore a new country. I was able to guide my own project and move at my own pace,
+                   applying my knowledge of electronics, programming, and mechanical engineering all at 
+                   the same time. It was a great combination of things within my comfort zone that I had
+                    prior experience with and new things I’d never done before. Capra was great at giving 
+                    us help with elements we were unsure about and plenty of freedom to guide our own project. 
+                </p>
+                <p>
+                  I really enjoyed living in Denmark, which was a wonderful change of pace with beautiful 
+                  scenery. I definitely understand why it’s one of the happiest countries in the world!
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/img/portfolio/capra/grapes.jpg" class="portfolio-img" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
