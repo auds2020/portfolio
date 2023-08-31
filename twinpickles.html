@@ -75,11 +75,11 @@
               <h2>About this project</h2>
               <div class="row gy-4">
                 <div class="col-lg-6">
-                  <p>For 2.017, Design of Electromechanical Robotic Systems, we were asked to build something which would help researchers study harmful algal blooms. 
+                  <p>For 2.017, Design of Electromechanical Robotic Systems, we were asked to build something that would help researchers study harmful algal blooms. 
                     Harmful algal blooms, or HABs, occur when colonies of algae grow out of control and produce toxic or harmful effects on their environment. 
-                    These blooms are becoming increasingly widepread and severe due to climate change, which improves conditions for their growth. 
+                    These blooms are becoming increasingly widespread and severe due to climate change, which improves conditions for their growth. 
                     There are many types of HABs, but since we're located in Massachusetts, we decided to focus on <em>Alexandrium catenella</em>, a major HAB-forming dinoflagellate found in
-                    northeast and northwest coastal regions. In New England, <em>Alexandrium catenella</em> is of large concern because it produces saxitoxin, the neurotoxin behind Paralytic Shellfish Poisoning (PSP). 
+                    northeast and northwest coastal regions. In New England, <em>Alexandrium catenella</em> is of great concern because it produces saxitoxin, the neurotoxin behind Paralytic Shellfish Poisoning (PSP). 
                     When contaminated seafood is consumed, PSP can lead to sickness, paralysis, and even death.                
                   </p>
                 </div>
@@ -89,12 +89,12 @@
             </div>
             <div class="row gy-4">
               <div class="col-lg-6">
-                <p>Some types of harmful algal blooms including <em>Alexandrium catenella</em>
+                <p>Some types of harmful algal blooms, including <em>Alexandrium catenella</em>,
                   have a particular stage of their lifecycle called cysts, where the algae goes dormant to
-                    protect itself until more favorable conditions arise. However, what causes cysts to bloom is poorly understood as collecting samples is difficult and expensive. 
-                    After consulting with experts and discussing our learning objectives, we evaluated that one useful niche which
-                    we would be able to assist in is soil sampling. We wanted to create a boat which could autonomously collect soil samples to help overcome this bottleneck. 
-                    By collecting more data, we can create better predictive models which can better inform policy makers and aquafarmers 
+                    protect itself until more favorable conditions arise. However, what causes cysts to bloom is poorly understood, as collecting samples is difficult and expensive. 
+                    After consulting with experts and discussing our learning objectives, we determined that one useful niche where
+                    we would be able to assist is soil sampling. We decided to create a boat that could autonomously collect soil samples to help overcome this bottleneck. 
+                    By collecting more data, we can create better predictive models that can better inform policymakers and aquafarmers 
                     so they can pull their shellfish out of the water before HABs arrive.
                 </p>
               </div>
@@ -112,11 +112,11 @@
             </div>
             <div class="row gy-4">
               <div class="col-lg-12">
-                <p>​We selected a catamaran base to provide stability to our platform. To simplify the design for our short timeline, we used premade plastic hulls from and 
-                  added a custom framing of 8020 T slots and aluminum tubing for structural support and easy mounting
-                  points. For station keeping, we have four T200 thrusters at 45 degree angles. To traverse between 
-                  waypoints we are using two T500 thrusters (which are stronger than the T200s) 
-                  in a differential thrust configuration. A sheet of marine grade 
+                <p>​We selected a catamaran base to provide stability to our platform. To simplify the design for our short timeline, we used premade plastic hulls and 
+                  added a custom framing of 80/20 T slots and aluminum tubing for structural support and easy mounting
+                  points. For stationkeeping, we have four T200 thrusters at 45-degree angles. To traverse between 
+                  waypoints, we are using two T500 thrusters (which are stronger than the T200s) 
+                  in a differential thrust configuration. A sheet of marine-grade 
                   plywood is attached to the top of the catamaran to mount all other systems. 
                 </p>
                 <img src="assets/img/portfolio/2.017/diagram.png" class="portfolio-img" alt="">
@@ -126,7 +126,7 @@
               <div class="col-lg-12">
                 <p>
                   <br>
-                  In order to connect the aluminum tubing and thrusters to the 80-20 base, we used 3D-printed carbon-fiber 
+                  In order to connect the aluminum tubing and thrusters to the 80/20 base, we used 3D-printed carbon-fiber 
                   composite using a Markforged printer.
                 </p>
               </div>
@@ -160,12 +160,12 @@
             <div class="row gy-4">
               <div class="col-lg-12">
                 <p><br>
-                  Early on in the decision process, the team decided to make the sampler a passive system 
-                  because running a cable to provide power would increase the likelihood for entanglement. After some research, we 
-                  chose to make a springloaded multicore system that preserves the water mud interface. 
+                  Early on in the design process, the team decided to make the sampler a passive system 
+                  because running a cable to provide power would increase the likelihood of entanglement. After some research, we 
+                  chose to make a spring-loaded multicore system that preserves the water-mud interface. 
                   Our solution is comprised of an outer frame that moves down with the inner portion of 
-                  the sampler; once the outer frame makes contact with the sea floor it remains stationary
-                  as the inner portion continues to move down. The different in heigh as the inner 
+                  the sampler; once the outer frame makes contact with the sea floor, it remains stationary
+                  as the inner portion continues to move down. The difference in height as the inner 
                   portion moves relative to the now stationary outer frames releases a pin that closes
                     the sediment sampler.
                 </p>
@@ -198,7 +198,7 @@
                 <p>
                   The goal for the electronics was to provide power management and control to the rest 
                   of the system. We utilized two 12V AGM batteries to power all systems on the boat.
-                  A Raspberry Pi controlled the station keeping and main navigation thrusters as well
+                  A Raspberry Pi controlled the stationkeeping and main navigation thrusters as well
                     as the deployment of the sediment sampler. At a high level, it followed the following wiring 
                     diagram.
                 </p>
@@ -217,9 +217,9 @@
               <img src="assets/img/portfolio/2.017/IMG_1129.jpg" class="portfolio-img" alt="">
               <p><br>
                 On the software end, we implemented some very simple stationkeeping (refer to the diagram for our control scheme), 
-                but there is potential for further development of waypoint navigation using GNSS, and even collision avoidance with 
-                the addition of sensors (likely stereoscopic depth camera or LiDAR). It would also be useful to detect obstacles on the bottom 
-                of the ocean floor using a fish finder sonar to ensure the cadamaran is actually able to collect a sample in a given location.
+                but there is potential for further development of waypoint navigation using GNSS and even collision avoidance with 
+                the addition of sensors (perhaps a stereoscopic depth camera or LiDAR). It would also be useful to detect obstacles on the bottom 
+                of the ocean floor using a fish-finder sonar to ensure the cadamaran is actually able to collect a sample in a given location.
               </p>
               <img src="assets/img/portfolio/2.017/stationkeeping.png" class="portfolio-img" alt="">
               <p>
@@ -228,9 +228,9 @@
                  <a href="assets\img\portfolio\2.017\finalreport.pdf">final report</a>.
               </p>
               <p> 
-                In our final test in the Charles River, we demonsted RC control of our
-                 vehicle, and  remote raising and lowering of our sampler. This validated our design as 
-                 a proof-of-concept which might be further developed for higher sampling robustness, increased sampling 
+                In our final test in the Charles River, we demonstrated RC control of our
+                 vehicle and remote raising and lowering of our sampler. This validated our design as 
+                 a proof-of-concept that might be further developed for higher sampling robustness, increased sampling 
                  capacity, and higher-level autonomy.
               </p>
               <img src="assets/img/portfolio/2.017/IMG_8326.JPG" class="portfolio-img" alt="">
