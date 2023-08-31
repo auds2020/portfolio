@@ -110,8 +110,9 @@
 
               <div class="col-lg-6">
                 <p>
-                  My biggest module was a linear sliding lift which completed the “beaver lift” task worth 
-                  the most points. For my first prototype of this module, I developed a belt system linking
+                  My biggest module was a linear sliding lift. I needed this vertical lift in order to lift up Tim the beaver, 
+                  press both the upper and lower buttons, and pull down the lamppost.
+                   For my first prototype of this module, I developed a belt system linking
                   several linear slides. These slides were produced by cutting slots into box aluminum, 
                   and fitting milled delrin sliders inside the slots. The delrin had tapped holes which
                     allowed me to mount the delrin to one of the aluminum bars, while allowing the other
@@ -138,38 +139,76 @@
                 </video>
               </div>
             </div>
-
             <p>
               My new lift design was a continuous lift using strings attached to a winch. As the winch
               was wound by a high torque motor, the string would shorten, raising the lift. Using the
                 speed-torque curves for each available motor, I was able to maximize the speed at which
                 the heavy beaver could be lifted, which was important since additional points were 
-                granted for accomplishing tasks first and the rounds were only 2.5 minutes long. 
+                granted for accomplishing tasks first and the rounds were only 2.5 minutes long. Then, after lifting 
+                the beaver, I'd move on to push the buttons using the same lift.
             </p>
-            <p>
-              I also wanted to be able to push both the upper and lower buttons on the game board 
-              using my lift, but since I planned on executing the beaver lift first to maximize points,
-              this meant I also needed the lift to be able to lower back down. In order to accomplish
-                this, I attached rubber bands between each set of slides. The rubber bands would pull
-                each slider towards one another, getting rid of any slack in the string and compressing
-                  the lift. That way, when the servos were spun the other way, the string would feed 
-                  back in and the lift would lower.
-            </p>
-
-            <p>
-              In order to support the lift, I created a baseplate below the main chassis of my vehicle.
-              By inlaying the lift inside the chassis, this lowered the center of mass of the vehicle,
-                which would improve stability on turns and prevent tipping on the ramp. Nonetheless, 
-                because the lift is inherently top-heavy, I found it was necessary to add fins to the 
-                base of the robot to act as a “foot” when climbing the ramp. This extended overall 
-                footprint of the robot, which prevented it from tipping backwards. If you're curious about the math 
-                behind this, feel to take a look at my long and boring calculations <a href="">here</a>.
-                <!-- LINK HERE -->
-            </p>
-            <div class="col-lg-3">
-              <video controls="controls" height="400" muted>
-                <source src="assets/img/portfolio/2.007/IMG_9792.MOV">
-              </video>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <p>In order to tip over the lamppost, I needed to design something which could grab onto it and torque it 
+                  downwards. After some testing, I found the robot was unable to push the lamppost from the bottom since the motors driving 
+                  the robot couldn't push hard enough. So instead, I thought I'd make use of the lift once again; by hooking the lamppost at the top 
+                  and pulling from there, the robot would not need to pull with as much force to supply the same torque since the distance between 
+                  the applied force and the pivot point was higher. Thus the same module could be adapted for this new task with the addition of a hook, which was 
+                  carefully designed to be out of the way of the beaver when lifting.
+                </p>
+              </div>
+              <div class="col-lg-3">
+                <img src="assets/img/portfolio/2.007/IMG_0485.jpg" class="portfolio-img" alt="">
+              </div>
+              <div class="col-lg-3">
+                <img src="assets/img/portfolio/2.007/IMG_9892.jpg" class="portfolio-img" alt="">
+              </div>
+            </div>
+            <br>
+            <div class="row gy-4">
+              <div class="col-lg-5">
+                <img src="assets/img/portfolio/2.007/cropped.png" class="portfolio-img" alt="">
+              </div>
+              <div class="col-lg-7">
+                <p>
+                  My lift was now able to go up consistently, but it would get stuck at the top because of friction even when the string was 
+                  given slack. Keeping it extended was not an option, since I wanted to do the beaver lift first to maximize the number of points I got, 
+                  but then subsequent tasks would require the lift to be lowered. Namely, both the upper and lower buttons were below the top height 
+                  of the beaver lift, and if I tried to go down the ramp with the lift fully extended, the robot would tip over. 
+                  In order to fix this, I attached rubber bands between each set of slides. The rubber bands would pull
+                  each slider towards one another, getting rid of any slack in the string and compressing
+                  the lift. That way, when the servos were spun the other way, the string would be tensioned and the lift would lower. 
+                  Through some testing, I found that it was best to alternate which side the rubber bands was on because otherwise, it would pinch the sliders 
+                  towards one another either to the left or right and cause them to catch. 
+                </p>
+                <p>In order to support the lift, I created a baseplate below the main chassis of my vehicle. 
+                  This way, instead of having the lift just sit on top of the robot, it sits below it on a plate in-between the wheels.
+                  This lowers the center of mass of the vehicle, which would improve stability on turn and prevent tipping on the ramp.
+                </p>
+              </div>
+            </div>
+            
+            <br>
+            <div class="row gy-4">
+              <div class="col-lg-3">
+                <p>
+                  Nonetheless, because the lift is inherently top-heavy, I found it was necessary to add fins to the 
+                   base of the robot to act as a “foot” when climbing the ramp. This extended overall 
+                   footprint of the robot, which prevented it from tipping backwards. If you're curious about the math 
+                   behind this, feel to take a look at my long and boring calculations <a href="">here</a>.
+                   <!-- LINK HERE -->
+               </p>
+               <p>Here is a video of the robot climbing a demo ramp I set up without tipping or slipping thanks to the fins.</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/img/portfolio/2.007/IMG_9803.jpg" class="portfolio-img" alt="">
+              </div>
+              <div class="col-lg-3">
+                <video controls="controls" muted>
+                  <source src="assets/img/portfolio/2.007/IMG_9792.MOV">
+                </video>
+              </div>
+            </div>
             </div>
               <p>
                 Ultimately, I advanced to the semifinals round and placed in the top 10% of robots. 
