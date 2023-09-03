@@ -376,8 +376,13 @@
   opacity: 0.4;
 }
 
-.gdesc-open .gdesc-inner {
+.glightbox-mobile .gdesc-open .gdesc-inner {
   padding-bottom: 30px;
+}
+
+.glightbox-mobile .glightbox-clean .gdesc-inner {
+  padding: 22px 20px;
+  background: rgba(0,0,0,.5);
 }
 
 .gdesc-closed .gslide-media {
