@@ -294,6 +294,10 @@ h6 {
     background: url("../img/mobile.JPG") center no-repeat;
     background-size: cover;
   }
+  /* #hero-container{
+    position: relative;
+    top: 20px;
+  } */
 }
 
 #hero:before {
