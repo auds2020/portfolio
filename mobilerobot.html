@@ -66,7 +66,7 @@
               <ul>
                 <li><strong>Category</strong>Class project</li>
                 <li><strong>Project date</strong>Spring 2023</li>
-                <li><strong>Skills required</strong>Python, OpenCV</li>
+                <li><strong>Skills required</strong>Python, OpenCV, HSV filtering, AR overlays</li>
                 <li><a href="https://github.com/auds2020/mobile-robot" class="btn-visit align-self-start">Github repository</a></li>
               </ul>
             </div>
@@ -78,7 +78,7 @@
                 navigation of a mobile robot. 
               </p>
               <p>
-                For April tag detection, I first need to find the internal matrix for the specific camera I’m 
+                For <b>April tag detection</b>, I first need to find the internal matrix for the specific camera I’m 
                 using, so I run a calibration script and show the camera a standard checkerboard pattern. The
                  script takes snapshots of the checkerboard for 30 seconds and then calculates an internal matrix 
                  detailing the camera’s properties, thus accounting for differences in focal length, field of view,
@@ -93,7 +93,7 @@
                     display the pitch, roll, and yaw of the tag relative to the camera.
               </p>
               <p>
-                The program for cone detection is also pretty straightforward: it applies a series of filters and
+                The program for <b>cone detection</b> is also pretty straightforward: it applies a series of filters and
                  masks to the image, then looks for pixels which fit within the range of HSV values I’ve predetermined
                   for cones. It then looks for the largest contiguous section of pixels which satisfy these requirements, 
                   which is typically the bottom section of the cone, and then determines its center and minimum radius to

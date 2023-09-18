@@ -70,7 +70,7 @@
               <ul>
                 <li><strong>Category</strong>Class project</li>
                 <li><strong>Project date</strong>Spring 2023</li>
-                <li><strong>Skills required</strong>Design, laser cutting, Python, OpenCV</li>
+                <li><strong>Skills required</strong>Laser cutting, Python, OpenCV, PCB design in Altium</li>
                 <li><a href="https://github.com/auds2020/pan-tilt" class="btn-visit align-self-start">Github repository</a></li>
               </ul>
             </div>
@@ -79,26 +79,26 @@
             <h2>About this project</h2>
             <p>
               For my final project for 2.679, Electronics for Mechanical Systems II, I wanted to 
-              implement what I had learned in computer vision into a pan-tilt gimbal that does 
-              face tracking. Eventually, we hope to integrate this system into a full-scale WALL-E
+              implement what I had learned in computer vision into a <b>pan-tilt gimbal that does 
+              face tracking</b>. Eventually, we hope to integrate this system into a full-scale WALL-E
                robot during our senior year. The hope is that WALL-E would be able to run around 
-               and follow a given person. 
+               and follow a person. 
             </p>
             <p>
               I first built a pan tilt gimbal using two servos and brackets, which I then mounted 
               to an acrylic plate. I attached a camera to the top of the gimbal using a laser cut 
-              acrylic piece. The main “brains” of my system is a Raspberry Pi 4 and my custom PCB
-               shield. The PCB allows me to directly plug in my servos into the Pi since the board
+              acrylic piece. The main “brains” of my system is a Raspberry Pi 4 and my <b>custom PCB
+               shield I designed in Altium</b>. The PCB allows me to directly plug in my servos into the Pi since the board
                 also pulls the two PWM pins and ground to the header. 
             </p>
             <p>
-              I also added several ports for buttons to control audio playback. There were 5 ports 
+              I also added several ports for buttons to control <b>audio playback</b>. There were 5 ports 
               in total, for record, pause, play, solar, and an extra button, as seen in the movie.
                I vinyl cut some stickers to add to my momentary switches to make the labeling clear,
                 and embedded each of the switches into an acrylic control board. 
             </p>
             <p>
-              Importantly, I wanted the entire system to be powered remotely without needing to remain
+              Importantly, I wanted the <b>entire system to be powered remotely</b> without needing to remain
                plugged into the wall. There are existing modules such as PyJuice you can purchase, 
                but this would mechanically interfere with my custom PCB (and they’re also pretty 
                expensive), so I thought I might as well integrate it into the PCB directly. In order
@@ -109,7 +109,7 @@
                    display battery life of WALL-E.
             </p>
             <p>
-              On the software end, this system makes use of OpenCV2. When the camera sees a person,
+              On the software end, this system makes use of <b>OpenCV2</b>. When the camera sees a person,
                it rotates the servos to try its best to keep the face in the center of the frame. If
                 a face isn’t detected for a while, it goes into discovery mode and will start looking
                  around in search of one. In the event it sees multiple faces, it will try to move to 
