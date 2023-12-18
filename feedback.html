@@ -98,8 +98,8 @@
                        the right amount of feed. It's like adding a thermostat to your furnace,
                         enabling smart control over basic hardware. Feedback minimizes human intervention,
                          allowing farmers to focus on expanding and streamlining their operations. 
-                        In fact, according to our calculations, we estimate that Feedback has potential to save a medium-sized fish farm 
-                   around $30K on labor and $50K in feed, which makes the $1.5K investmet into Feedback well worth it.
+                        In fact, according to our calculations, we estimate that Feedback has the potential to save a medium-sized fish farm 
+                   around $30K on labor and $50K in feed, which makes the $1.5K investment into Feedback well worth it.
                 </p>
               </div>
             </div>
@@ -134,29 +134,29 @@
                 <div class="col-lg-12">
                   <h2>Key contributions</h2>
                   <p>
-                    After chatting with my research advisor in the MIT Sea Grant, <b>I identified that this concept would be a commercially viable product which 
+                    After chatting with my research advisor in the MIT Sea Grant, <b>I identified that this concept would be a commercially viable product that 
                     satisfies a user need and fills a gap in the aquaculture market</b>. And importantly, the project had interesting technical 
                     components that could be <b>well-scoped such that a prototype could be made in just four weeks</b>, the remaining time we had in the class. 
-                    I pitched the idea among the hundreds we generated, and eventually it was downselected to our finalist. 
-                    I <b>spearheaded user research</b>, connecting with three fish farms who were interested in testing with us and conducting eight of the nine interviews we had with fish farmers and researchers in the field.
+                    I pitched the idea among the hundreds we generated, and eventually, it was downselected to our finalist. 
+                    I <b>spearheaded user research</b>, connecting with three fish farms that were interested in testing with us and conducting eight of the nine interviews we had with fish farmers and researchers in the field.
                   </p>
                   <p>
                     Because I was the only member of our team with programming experience, my biggest and most daunting task was to <b>write all the software required to make the system run</b>. This required me to draw upon my skills in CSS and HTML and <b>learn JavaScript and SQLite to develop an entire website
-                      frontend and backend in two weeks</b>. Because we were using a Jetson Nano, which did not have a built-in analog-to-digital converter, we used an Arduino to parse the data from our Vernier sensors, then used serial communication through the USB to get sensor input from sensors. The scale similarly reported the weight of the feeder live through serial input. By 
-                      parsing all three datastreams simulataneously, their data could be time synchronized and tagged with a timestamp. 
+                      frontend and backend in two weeks</b>. Because we were using a Jetson Nano, which did not have a built-in analog-to-digital converter, we used an Arduino to parse the data from our Vernier sensors, and then used serial communication through the USB to get sensor input from sensors. The scale similarly reported the weight of the feeder live through serial input. By 
+                      parsing all three datastreams simultaneously, their data could be time synchronized and tagged with a timestamp. 
                       Using existing studies in fish satiety, I could interpolate the amount to feed depending on the combination of sensor data and information input into the website by the farmer. 
-                    In order to account for anomolies in sensor readings, I calculated a rolling average of the previous thirty minutes of data prior to a feeding. 
+                    In order to account for anomalies in sensor readings, I calculated a rolling average of the previous thirty minutes of data prior to feeding. 
                   </p>
                   <p>
                     Combining hardware with software, I did <b>extensive testing to ensure that the correct amount of food was dispensed</b> both when the user clicked the "feed now" button 
-                    as well as during scheduled feeds. Using a motor controller, I programmed the Nano to give PWM output such that we could fine-tune the speed of the auger and flyweel in the off-the-shelf feeder we bought. This allowed us to feed quickly at first, then slow down for precision as we approached the final feed amount. 
+                    as well as during scheduled feeds. Using a motor controller, I programmed the Nano to give PWM output such that we could fine-tune the speed of the auger and flywheel in the off-the-shelf feeder we bought. This allowed us to feed quickly at first, then slow down for precision as we approached the final feed amount. 
                     And because I wanted farmers to be able to learn about their tanks and check in on them at a glance, I integrated database storage
-                    and livestreaming of data to the website. During testing, I found lag to be a significant challenge, which required me to <b>optimize our code to be non-blocking and run simulataneously on the different cores of the computer using threads</b>.
+                    and livestreaming of data to the website. During testing, I found lag to be a significant challenge, which required me to <b>optimize our code to be non-blocking and run simultaneously on the different cores of the computer using threads</b>.
                   </p>
                   <p>
                     Our user interface was a key component of our value proposition, as users needed 
                       to easily input information about their tank setup and feeder. By making our user interface accessible not only on the touchscreen 
-                      attatched to Feedback, but also <b>any web-enabled device including phones, tablets, and computers</b>, we could streamline farmers' workflows by 
+                      attached to Feedback, but also on <b>any web-enabled device including phones, tablets, and computers</b>, we could streamline farmers' workflows by 
                       letting them view information about all of their tanks and feeders from one place. I encourage you to take a look at our website (which won't actually turn on anything, of course, 
                       because it's been disabled) to get a better idea of the user interface.
                   </p>
@@ -167,22 +167,22 @@
               <div class="col-lg-12">
                 <h2>Design process</h2>
                 <p>
-                  We explored a variety of different ideas when it came to mounting sensors. We considered using steel cables to suspend them in the water, but then decided installation 
+                  We explored a variety of different ideas when it came to mounting sensors. We considered using steel cables to suspend them in the water but then decided installation 
                   costs would be too high and cleaning the sensors would be annoying. We also considered using a buoy weighed down in the water, but we wanted to maintain
                   consistent height in the water column to get consistent data and thought that the risk of fish pushing the buoy around or getting entangled was too high. Furthermore, both of 
                   these concepts would suffer from cable management, since power cables in the water would pose risks for entanglement of the fish and generally be quite annoying to route into the tank. 
-                  We also considered developing a clamp for the side of the tank, but abandoned the idea because there was such high variance in tank types. For example, some farms had inlaid tanks which are 
-                  ponds which are holes in the floor. Others had concrete walls 1.5 feet thick and 6 feet tall. Some had glass tanks which were mere inches thick. Some tanks were round, some rectangular. This variance meant inherently we could 
+                  We also considered developing a clamp for the side of the tank but abandoned the idea because there was such high variance in tank types. For example, some farms had inlaid tanks which are 
+                  ponds which are holes in the floor. Others had concrete walls 1.5 feet thick and 6 feet tall. Some had glass tanks that were less than an inch thick. Some tanks were round, some rectangular. This variance meant inherently we could 
                   not cater to all of these tank types with one design. 
                 </p>
                 <p>
                   We eventually went with a faucet-shaped design because of its <b>ease of cleaning and installation</b>. The user would simply need to place the sensor mast in front of the tank,
-                  fill the base with water to weigh it down, and lower the sensors into the water using the winch. Cleaning was similarly easy; the user would only need to pull the sensors back up with the winch, then swivel the 
-                  hook around using the handle, then they could pop open the sensor cage and clean inside.
+                  fill the base with water to weigh it down, and lower the sensors into the water using the winch. Cleaning was similarly easy; the user would only need to pull the sensors back up with the winch, swivel the 
+                  hook around using the handle, then pop open the sensor cage and clean inside.
                 </p>
                 <p>
-                  However, over the course of developing the hardware, we discovered that the cost of this design, although not crazy compared to the savings a farmer would recieve, was still more expensive than ideal. In an ideal scenario, the majority of 
-                  the cost would come from the computing such that each additional unit is comparatively cheap for the farmer. Thus, if this were to become converted 
+                  However, while developing the hardware, we discovered that the cost of this design, although not crazy compared to the savings a farmer would receive, was still more expensive than ideal. In an ideal scenario, the majority of 
+                  the cost would come from the computer such that each additional unit is comparatively cheap for the farmer. Thus, if this were to become converted 
                   into a real product, we would probably go with the vice-like design, potentially designing several "variants" to cater to different tank types.
                 </p>
               </div>
@@ -192,14 +192,14 @@
               <div class="col-lg-6">
                 <h2>Practicing soft skills</h2>
                 <p>
-                  I’ve also learned so much about both what makes
+                  I’ve learned so much about not only what makes
                     a successful product, but also what makes a successful team. <b>As the team’s systems
                     integrator, I learned how to scope to tight timelines, facilitate communication,
                       and align differing goals.</b>
                 </p>
                 <p>
                   With over a <b>thousand attendees in person</b>, as well as <b>thousands of online viewers</b>, 
-                  this was definitely the biggest presentation I've ever given. I'm glad the presentation was so well-recieved, and 
+                  this was definitely the biggest presentation I've ever given. I'm glad the presentation was so well-received, and 
                   I'm so proud of the insane amount of work our team has put into
                      this project.
                 </p>
@@ -207,7 +207,7 @@
                   As I reflect on my time at MIT, I’m very proud of the skills that I’ve learned 
                   and grateful to the friends and mentors I’ve met here. After seeing so many 
                   familiar faces cheering me on during my presentation, I was reminded how fortunate
-                   I’ve been to find a community who values and supports me. I can’t wait to see
+                   I’ve been to find a community that values and supports me. I can’t wait to see
                     what new, <em>wild</em> experiences my career will have in store for me.
                 </p>
               </div>
@@ -235,19 +235,23 @@
                 </div>
             </div>
 
-            <!-- TODO fix ratio -->
-            <div class="row gy-4">
-              <div class="col-lg-12"> 
-                  <h2>Final presentation recording</h2>
-                  <iframe src="https://player.vimeo.com/video/894075516?h=852f54db43" 
-                          width="100%" 
-                          height="auto" 
-                          frameborder="0" 
-                          allow="autoplay; fullscreen; picture-in-picture" 
-                          allowfullscreen>
-                  </iframe>
+            <!-- TODO fix sizing -->
+            <div class="container-fluid">
+              <div class="row gy-4">
+                  <div class="col-lg-12">
+                      <h2>Final presentation recording</h2>
+                      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                          <iframe src="https://player.vimeo.com/video/894075516?h=852f54db43" 
+                                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                                  frameborder="0" 
+                                  allow="autoplay; fullscreen; picture-in-picture" 
+                                  allowfullscreen>
+                          </iframe>
+                      </div>
+                  </div>
               </div>
-            </div>
+          </div>
+          
         </div>
 
     
