@@ -75,62 +75,141 @@
             <h2>About this</h2>
             <div class="row gy-4">
               <div class="col-lg-12">
-                <p><b>Arcturus is MIT’s autonomous marine robotics team. I founded Arcturus during my sophomore 
-                  year in 2022, and it’s been a wonderful journey growing with the team.</b> We've grown rapidly, 
-                  tripling in size to around 60 members in the last year. Our mission is to:</p>
-                <ul style=" margin-bottom: 0px; margin-top: 0px;">
-                  <li>Give undergraduates hands-on experience leading teams and applying their knowledge by building and programming autonomous vehicles.</li>
-                  <li>Share our love of robots with the community through a series of outreach events including lab tours, demos, classes, and mentorship.</li>
-                  <li>Create technology that we believe will positively impact the environment and coastal communities.</li>
-                </ul>
-                <p>Arcturus competes in <b>two international competitions</b>: the <a href="https://www.njordchallenge.com/">Njord Challenge</a> in Trondheim, 
-                  Norway, and <a href="https://roboboat.org/programs/2024/">RoboBoat</a>, in Sarasota, Florida. Our two autonomous surface vessels are <em>Ship Happens</em>
-                  (our 6'-long orange competition vehicle) and <em>Athena</em> (a 3'-long yellow cadamaran we use for small-scale testing of our autonomy).</p>
-              </div>
-              <div class="col-lg-6">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/portfolio/feedback/IMG_6715.jpg" class="portfolio-img" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/portfolio/feedback/IMG_6714.jpg" class="portfolio-img" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/portfolio/feedback/IMG_6713.jpg" class="portfolio-img" alt="">
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <p>Our <b>autonomy stack runs on ROS2</b>, which allows our stack to be modular and hardware-agnostic (as in, our autonomy 
-                  can be applied onto any boat with similar hardware and make it autonomous). Our hulls are a <b>composite of fiberglass and 
-                  epoxy resin overlaid on top of CNC-milled foamboard</b>. For propulsion, we currently utilize skid-steering using custom-made azimith 
-                thrusters which enable the thrusters to rotate in place independently, but this season, we will be implementing a quad-thruster 
-              propulsion system to improve maneuverability and stationkeeping.</p>
-                <p>If you'd like a system overview of our hardware and software stack for each competition, please see our technical report for 
-                <a href="assets\img\portfolio\arcturus\Njord_Challenge_2023_TDR.pdf">RoboBoat 2023</a> and 
-                <a href="assets\img\portfolio\arcturus\TDR_MITArcturus_RoboBoat2023.pdf">Njord Challenge 2023</a>. If you'd like to
-                read our most recent blog updates, please visit our <a href="http://arcturus.mit.edu/">website</a>!</p>
+                <p>
+                  This project was my <b>capstone for MIT Mechanical Engineering's Product Design Processes</b> class.
+                   Using a combination of temperature, dissolved oxygen, and weight sensors, 
+                   our product — aptly named Feedback — aims to streamline operations in fish farms, 
+                   improve fish health, prevent food waste, and lower labor costs through automating feeding. 
+                </p>
+                <p>
+                  In the world of commercial fish farming, efficient fish growth is crucial. 
+                  The challenge lies in determining the right amount of food for the fish. 
+                  Feeding them too much leads to waste and extra costs, while feeding them 
+                  too little slows their growth. Farmers must consider factors like fish size,
+                   number, water temperature, and dissolved oxygen levels in water to calculate
+                    the optimal feed amount.
+                </p>
+                <p>
+                  Currently, fish farmers face a dilemma: either spend hours daily calculating
+                   and manually feeding, or use automatic feeders that lack precision and often
+                    result in food waste. To address this issue, a new system called Feedback
+                     has been developed. This system integrates with existing feeders and uses
+                      temperature and oxygen level sensors to automatically calculate and dispense
+                       the right amount of feed. It's like adding a thermostat to your furnace,
+                        enabling smart control over basic hardware. Feedback minimizes human intervention,
+                         allowing farmers to focus on expanding and streamlining their operations. 
+                        In fact, according to our calculations, we estimate that Feedback has potential to save a medium-sized fish farm 
+                   around $30K on labor and $50K in feed, which makes the $1.5K investmet into Feedback well worth it.
+                </p>
               </div>
             </div>
+
+              <div class="row gy-4">
+                <div class="col-lg-4">
+                  <h2>System breakdown</h2>
+                  <p>Feedback uses temperature and dissolved oxygen sensors which are suspended in the water by a curved sensor mast. These sensors relay the temperature and dissolved oxygen to a computer, which stores it and 
+                    performs the calculations required to find out how much to feed. Feedback then controls the motors of the off-the-shelf fish feeder to feed the correct amount, using the scale placed beneath the feeder to confirm how much it's fed. This allows us to confirm we are feeding accurately and notify farmers if their feeder 
+                    is empty or jammed. If this were to become a real product, we would probably build our own feeder with this functionality so that it'd be an integrated system, but we didn't have time.
+                  </p>
+                </div>
+                <div class="col-lg-8">
+                  <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                      <div class="swiper-slide">
+                        <img src="assets/img/portfolio/feedback/IMG_6715.jpg" class="portfolio-img" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/img/portfolio/feedback/IMG_6714.jpg" class="portfolio-img" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/img/portfolio/feedback/IMG_6713.jpg" class="portfolio-img" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gy-4">
+                <div class="col-lg-12">
+                  <h2>Key contributions</h2>
+                  <p>
+                    After chatting with my research advisor in the MIT Sea Grant, <b>I identified that this concept would be a commercially viable product which 
+                    satisfies a user need and fills a gap in the aquaculture market</b>. And importantly, the project had interesting technical 
+                    components that could be <b>well-scoped such that a prototype could be made in just four weeks</b>, the remaining time we had in the class. 
+                    I pitched the idea among the hundreds we generated, and eventually it was downselected to our finalist. 
+                    I <b>spearheaded user research</b>, connecting with three fish farms who were interested in testing with us and conducting eight of the nine interviews we had with fish farmers and researchers in the field.
+                  </p>
+                  <p>
+                    Because I was the only member of our team with programming experience, my biggest and most daunting task was to <b>write all the software required to make the system run</b>. This required me to draw upon my skills in CSS and HTML and <b>learn JavaScript and SQLite to develop an entire website
+                      frontend and backend in two weeks</b>. Because we were using a Jetson Nano, which did not have a built-in analog-to-digital converter, we used an Arduino to parse the data from our Vernier sensors, then used serial communication through the USB to get sensor input from sensors. The scale similarly reported the weight of the feeder live through serial input. By 
+                      parsing all three datastreams simulataneously, their data could be time synchronized and tagged with a timestamp. 
+                      Using existing studies in fish satiety, I could interpolate the amount to feed depending on the combination of sensor data and information input into the website by the farmer. 
+                    In order to account for anomolies in sensor readings, I calculated a rolling average of the previous thirty minutes of data prior to a feeding. 
+                  </p>
+                  <p>
+                    Combining hardware with software, I did <b>extensive testing to ensure that the correct amount of food was dispensed</b> both when the user clicked the "feed now" button 
+                    as well as during scheduled feeds. Using a motor controller, I programmed the Nano to give PWM output such that we could fine-tune the speed of the auger and flyweel in the off-the-shelf feeder we bought. This allowed us to feed quickly at first, then slow down for precision as we approached the final feed amount. 
+                    And because I wanted farmers to be able to learn about their tanks and check in on them at a glance, I integrated database storage
+                    and livestreaming of data to the website. During testing, I found lag to be a significant challenge, which required me to <b>optimize our code to be non-blocking and run simulataneously on the different cores of the computer using threads</b>.
+                  </p>
+                  <p>
+                    Our user interface was a key component of our value proposition, as users needed 
+                      to easily input information about their tank setup and feeder. By making our user interface accessible not only on the touchscreen 
+                      attatched to Feedback, but also <b>any web-enabled device including phones, tablets, and computers</b>, we could streamline farmers' workflows by 
+                      letting them view information about all of their tanks and feeders from one place. I encourage you to take a look at our website (which won't actually turn on anything, of course, 
+                      because it's been disabled) to get a better idea of the user interface.
+                  </p>
+              </div>
+            </div>
+
             <div class="row gy-4">
               <div class="col-lg-12">
-                <p>Part of MIT Arcturus’ mission is to share our technology with the MIT and Boston/Cambridge community through <b>outreach programs</b>. 
-                  Because we often showcase our work at MIT, it’s very common for us to meet both those who have never heard
-                  about autonomy and people who have been studying for autonomy for most of their life in the same afternoon, 
-                  so we work hard to cater to all levels of background knowledge during our outreach events.</p>
-              </div>
-              <div class="col-lg-6">
-                <p>We mentor high school FTC and FRC teams, give tours of the MIT Sea Grant lab to the public,
-                  and run events at festivals, museums, and conferences. Over the course of the year, we reach hundreds of students, parents, 
-                  academics, industry professionals, and curious community members!
+                <h2>Design process</h2>
+                <p>
+                  We explored a variety of different ideas when it came to mounting sensors. We considered using steel cables to suspend them in the water, but then decided installation 
+                  costs would be too high and cleaning the sensors would be annoying. We also considered using a buoy weighed down in the water, but we wanted to maintain
+                  consistent height in the water column to get consistent data and thought that the risk of fish pushing the buoy around or getting entangled was too high. Furthermore, both of 
+                  these concepts would suffer from cable management, since power cables in the water would pose risks for entanglement of the fish and generally be quite annoying to route into the tank. 
+                  We also considered developing a clamp for the side of the tank, but abandoned the idea because there was such high variance in tank types. For example, some farms had inlaid tanks which are 
+                  ponds which are holes in the floor. Others had concrete walls 1.5 feet thick and 6 feet tall. Some had glass tanks which were mere inches thick. Some tanks were round, some rectangular. This variance meant inherently we could 
+                  not cater to all of these tank types with one design. 
                 </p>
-                <p> One of our most popular programs are our Sea Perches, underwater remotely operated vehicles 
-                made from PVC. We have held several battlebots events with everyone from middle schoolers to incoming MIT freshmen, challenging 
-                them to compete head-to-head in the Sea Perch Olympics. In this game, students are tasked with pushing rubber ducks and sinkers into their 
-                opponent's "endzone" and popping their opponent's balloons to maximize the number of points they get before time runs out!</p>
+                <p>
+                  We eventually went with a faucet-shaped design because of its <b>ease of cleaning and installation</b>. The user would simply need to place the sensor mast in front of the tank,
+                  fill the base with water to weigh it down, and lower the sensors into the water using the winch. Cleaning was similarly easy; the user would only need to pull the sensors back up with the winch, then swivel the 
+                  hook around using the handle, then they could pop open the sensor cage and clean inside.
+                </p>
+                <p>
+                  However, over the course of developing the hardware, we discovered that the cost of this design, although not crazy compared to the savings a farmer would recieve, was still more expensive than ideal. In an ideal scenario, the majority of 
+                  the cost would come from the computing such that each additional unit is comparatively cheap for the farmer. Thus, if this were to become converted 
+                  into a real product, we would probably go with the vice-like design, potentially designing several "variants" to cater to different tank types.
+                </p>
+              </div>
+            </div>
+
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <h2>Practicing soft skills</h2>
+                <p>
+                  I’ve also learned so much about both what makes
+                    a successful product, but also what makes a successful team. <b>As the team’s systems
+                    integrator, I learned how to scope to tight timelines, facilitate communication,
+                      and align differing goals.</b>
+                </p>
+                <p>
+                  With over a <b>thousand attendees in person</b>, as well as <b>thousands of online viewers</b>, 
+                  this was definitely the biggest presentation I've ever given. I'm glad the presentation was so well-recieved, and 
+                  I'm so proud of the insane amount of work our team has put into
+                     this project.
+                </p>
+                <p>
+                  As I reflect on my time at MIT, I’m very proud of the skills that I’ve learned 
+                  and grateful to the friends and mentors I’ve met here. After seeing so many 
+                  familiar faces cheering me on during my presentation, I was reminded how fortunate
+                   I’ve been to find a community who values and supports me. I can’t wait to see
+                    what new, <em>wild</em> experiences my career will have in store for me.
+                </p>
               </div>
                 <div class="col-lg-6">
                   <div class="portfolio-details-slider swiper">
@@ -155,9 +234,21 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-          </div>
+
+            <!-- TODO fix ratio -->
+            <div class="row gy-4">
+              <div class="col-lg-12"> 
+                  <h2>Final presentation recording</h2>
+                  <iframe src="https://player.vimeo.com/video/894075516?h=852f54db43" 
+                          width="100%" 
+                          height="auto" 
+                          frameborder="0" 
+                          allow="autoplay; fullscreen; picture-in-picture" 
+                          allowfullscreen>
+                  </iframe>
+              </div>
+            </div>
         </div>
-      </div>
 
     
     </section><!-- End Portfolio Details Section -->
