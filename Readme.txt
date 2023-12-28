@@ -1,1 +1,1 @@
-This is the code for my <a href="audschen.com" target="_blank">portfolio website</a>.
+This is the code for my portfolio website, audschen.com.
