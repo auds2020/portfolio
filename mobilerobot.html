@@ -72,36 +72,50 @@
             </div>
           </div>
           <div class="portfolio-description">
-              <h2>About this project</h2>
-              <p>
-                For my 2.12, Introduction to Robotics class, I was responsible for computer vision for the 
-                navigation of a mobile robot. 
-              </p>
-              <p>
-                For <b>April tag detection</b>, I first need to find the internal matrix for the specific camera I’m 
-                using, so I run a calibration script and show the camera a standard checkerboard pattern. The
-                 script takes snapshots of the checkerboard for 30 seconds and then calculates an internal matrix 
-                 detailing the camera’s properties, thus accounting for differences in focal length, field of view,
-                  etc. Showing the camera more angles of the checkerboard is actually advantageous, since it’ll 
-                  provide a more complete dataset to draw from. 
-              </p>
-              <p>
-                I can then input the camera matrix into my April
-                   tag detection file, which constantly searches for April tags from a given family. If it detects
-                    one, I detect the corners and draw a box with it. I also added some augmented reality components 
-                    to the program by having each axis projected onto the center of the tag. On the top of the tag, I 
-                    display the pitch, roll, and yaw of the tag relative to the camera.
-              </p>
-              <p>
-                The program for <b>cone detection</b> is also pretty straightforward: it applies a series of filters and
-                 masks to the image, then looks for pixels which fit within the range of HSV values I’ve predetermined
-                  for cones. It then looks for the largest contiguous section of pixels which satisfy these requirements, 
-                  which is typically the bottom section of the cone, and then determines its center and minimum radius to
-                   enclose it. Finally, it draws a circle around the object in the original image. I used HSV instead of RGB 
-                   since it’s more robust under different lighting conditions, but nonetheless I would recommend tuning the 
-                   program anytime the robot is operating in a new environment.
-              </p>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <h2>About this project</h2>
+                <p>
+                  For 2.12, Introduction to Robotics, I was responsible for computer vision for the 
+                  navigation of a mobile robot. The mobile robot is tasked with navigating to pick up a red
+                   AED and bring it to a patient experiencing cardiac arrest while avoiding cones in its way. 
+                   The robot chassis looked as follows and is controlled by a Jetson Nano. 
+                  The arm attached the front tilts back to retrieve the AED off the stand.
+                </p>
+                <p>For <b>April tag detection</b>, I first need to find the internal matrix for the specific camera I’m 
+                  using, so I run a calibration script and show the camera a standard checkerboard pattern. The
+                  script takes snapshots of the checkerboard for 30 seconds and then calculates an internal matrix 
+                  detailing the camera’s properties, thus accounting for differences in focal length, field of view,
+                    etc. Showing the camera more angles of the checkerboard is actually advantageous, since it’ll 
+                    provide a more complete dataset to draw from. 
+                </p>
               </div>
+              <div class="col-lg-6">
+                <img src="assets/img/portfolio/2.12/IMG_6908.jpg" class="portfolio-img" alt="">
+              </div>
+            </div>
+            <br>
+            <div class="row gy-4">
+              <div class="col-lg-12">
+                <p>
+                  I can then input the camera matrix into my April
+                    tag detection file, which constantly searches for April tags from a given family. If it detects
+                      one, I detect the corners and draw a box with it. I also added some augmented reality components 
+                      to the program by having each axis projected onto the center of the tag. On the top of the tag, I 
+                      display the pitch, roll, and yaw of the tag relative to the camera.
+                </p>
+                <p>
+                  The program for <b>cone detection</b> is also pretty straightforward: it applies a series of filters and
+                  masks to the image, then looks for pixels which fit within the range of HSV values I’ve predetermined
+                    for cones. It then looks for the largest contiguous section of pixels which satisfy these requirements, 
+                    which is typically the bottom section of the cone, and then determines its center and minimum radius to
+                    enclose it. Finally, it draws a circle around the object in the original image. I used HSV instead of RGB 
+                    since it’s more robust under different lighting conditions, but nonetheless I would recommend tuning the 
+                    program anytime the robot is operating in a new environment.
+                </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
