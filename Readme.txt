@@ -1,2 +1,1 @@
-Author: Audrey Chen
-Published: August 2023
+This is the code for my porfolio website, audschen.com. 
