@@ -102,7 +102,7 @@
                plugged into the wall. There are existing modules such as PyJuice you can purchase, 
                but this would mechanically interfere with my custom PCB (and they’re also pretty 
                expensive), so I thought I might as well integrate it into the PCB directly. In order
-                to do so, I added a zero voltage diode and port for a Pololu step down converter, so
+                to do so, I added a zero-voltage diode and port for a Pololu step down converter, so
                  the system could be powered off of AA batteries. The buck converter would convert 
                  the 9V to 5V and also provide ports for 5V and ground to power a touchscreen. This
                   touch screen would enable people to play infinite songs, and in future iterations,
@@ -117,7 +117,7 @@
                  long time to tune. 
             </p>
             <p>
-              In order to detect when buttons were pressed and relased, I used <a href='https://gpiozero.readthedocs.io/en/stable/'>gpiozero's button function</a>. 
+              In order to detect when buttons were pressed and released, I used <a href='https://gpiozero.readthedocs.io/en/stable/'>gpiozero's button function</a>. 
               For audio playback, I found it was pretty tricky to implement recording for an unknown 
               time, since most existing libraries have you specify the time to record when you call
                the function. To get around this, I needed to use the non-blocking streaming version of PyAudio 

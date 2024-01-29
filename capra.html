@@ -114,7 +114,7 @@
             <p>
               The vertical lift is based on a double reverse four-bar linkage system to ensure the gimbal remains parallel to the ground during lifting.
               The holes in the 40x40 aluminum extrusions and flat plate aluminum were milled to ensure 
-              colinearity. The black pieces are 3D-printed at high infill (80% to 100%) to improve 
+              collinearity. The black pieces are 3D-printed at high infill (80% to 100%) to improve 
               rigidity. Finally, the entire assembly was mounted to a wooden plate and onto the robot’s 
               cover. In order to control the lift from the remote control, we use a 2-channel 
               switch connected to the receiver, which we can then use to trigger the linear actuator. The height of the whole assembly could be reported back using a potentiometer
@@ -131,7 +131,7 @@
               <p>
               <br>
               In order to power it all, we pulled power from the robot itself, taking care that the overall power draw of all the devices running 
-              simulataneously wouldn't overload it. We had two DC-DC converters: one which would always be on as long as the robot was on, and one "safe power" 
+              simultaneously wouldn't overload it. We had two DC-DC converters: one which would always be on as long as the robot was on, and one "safe power" 
               which would turn off when you hit the emergency stop. Elements which moved (the lift and gimbal) would be connected to the safe power so that they could be stopped 
               in case of emergency. The linear actuator was driven by a controller with built-in overcurrent protection, so we designed mechanical stops for the lift. When the lift would 
               go too high or too low, it would collide with the mechanical stops, thus causing a spike in current through the controller, causing it to shut off the linear actuator and 
