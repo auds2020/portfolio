@@ -80,26 +80,12 @@
                    than we should've because we didn't communicate when we fed them. I looked into buying an automatic feeder, but 
                   when I looked it up, I found that all the off-the-shelf fish feeders were geared towards fish flakes, not algae thins, and instead 
                   of being programmable to feed every few days, they expected you to feed your fish several times each day. So, I thought, what the heck, let's just make one instead.</p>
-              </div>
-              <!-- TODO replace with 3D model -->
-              <div class="col-lg-6">
-                <!-- <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/portfolio/snail/placeholdercad.png" alt="">
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div> -->
-                <div class="ratio-16-9"> <iframe class="ratio-inner" title="My skull" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4744fd8a5ed548cb82623fd6766bb039/embed"> </iframe> </div>
-              </div>
-              <div class="col-lg-6">
                 <p>I first created a mockup of the assembly in Onshape. I had initially envisioned a Pez-dispenser style machine, which loads all of the algae thins in a spring-loaded stack and then dispenses them at the bottom. 
                   But then I considered that the algae thins are pretty brittle, and if it broke apart inside the machine, it would be annoying to clean out all of the previous thins to fix it. So instead, I decided to pivot to a 
                   revolver mechanism. A servo would rotate the revolver around, and one of the slots would have a hole, allowing the thins to fall down into the tank. Each chamber of the revolver would hold two algae thins, and with eight chambers, 
                   you would only need to refill the feeder once a month.
                 </p>
-              </div>
+                </div>
             </div>
             <div class="row gy-4">
               <div class="col-lg-6">
@@ -112,8 +98,9 @@
                 <p>The servo is fixed to the base using standoffs, and the stationary plate below the revolver is attached to the servo at the same mounting points. After 3D-printing and laser-cutting all the pieces, I was ready to assemble.
                    Here is what the final assembly looked like!
                 </p>
-                <p>I wrote up some Arduino code to count down every four days and turn the servo the correct amount such that it would drop the algae discs. At the end of the cycle, it would move back to the start and the refill light would turn on! Here is 
-                  a demo of it working with four seconds between feedings for demonstrative purposes.</p>
+                <p>I wrote up some Arduino code to count down every four days and turn the servo the correct amount such that it would drop the algae discs. </p>
+                <!-- <p>At the end of the cycle, it would move back to the start and the refill light would turn on! Here is 
+                  a demo of it working with four seconds between feedings for demonstrative purposes.</p> -->
               </div>
                 <div class="col-lg-6">
                   <div class="portfolio-details-slider swiper">
