@@ -126,7 +126,7 @@
     }
   });
 
-  /**
+/**
    * Preloader
    */
   let preloader = select('#preloader');
