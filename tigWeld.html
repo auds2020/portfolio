@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tig Welded Automata</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <script>
+  // Delay loading the stylesheets
+  setTimeout(() => {
+    const fontLink = document.createElement('link');
+    fontLink.href = 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap';
+    fontLink.rel = 'stylesheet';
+    document.head.appendChild(fontLink);
+
+    const bootstrapIconsLink = document.createElement('link');
+    bootstrapIconsLink.href = 'assets/vendor/bootstrap-icons/bootstrap-icons1.css';
+    bootstrapIconsLink.rel = 'stylesheet';
+    document.head.appendChild(bootstrapIconsLink);
+
+    const boxiconsLink = document.createElement('link');
+    boxiconsLink.href = 'assets/vendor/boxicons/css/boxicons.css';
+    boxiconsLink.rel = 'stylesheet';
+    document.head.appendChild(boxiconsLink);
+  }, 3000); // 3000ms = 3 seconds
+</script>
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img loading="lazy" src="assets/img/portfolio/skateboard rack/IMG_0579.jpg" class="portfolio-img" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Tig Welded Automata</h3>
+              <ul>
+                <li><strong>Category</strong>For fun</li>
+                <li><strong>Project date</strong>June 2025-Present</li>
+                <li><strong>Skills used</strong>Hand shear, slip roll, tube bender, ring roller, ironworker shear, hand plasma cutter, ironworker punch, cold saw, portaband saw</li>
+                <!-- <li><a href="http://arcturus.mit.edu/" class="btn-visit align-self-start" target="_blank">Visit Website</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="portfolio-description">
+            <h2>About this</h2>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <p>
+                  The objective of this project was to generally get a lot more comfortable in the metal shop and use as many tools as possible, including the hand shear, slip roll, tube bender, 
+                  ring roller, ironworker shear, hand plasma cutter, ironworker punch, cold saw, and portaband saw.
+                </p>
+                <p>For my design, I wanted to create a little DJ who would nod along to music and scratch records. In order to do this, it'd require three different cams on a crank shaft: one for each record and 
+                  one for the DJ's head. I began by CADing my idea so I could get a sense of scale and a better idea of what materials I'd need to use. I took inspiration from automotive parts and 
+                  online welded sculptures, and decided to make the main body out of nuts and bolts.
+                </p>
+                <p>Once I had a better idea of how it would come together, I began by welding the main body.</p>
+              </div>
+              <div class="col-lg-6">
+                <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img loading="lazy" src="assets/img/portfolio/skateboard rack/IMG_0579.jpg" class="portfolio-img" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+              </div>
+            </div>
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img loading="lazy" src="assets/img/portfolio/arcturus/IMG_0362.JPG" alt="">
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <img loading="lazy" src="assets/img/portfolio/arcturus/arcturus.jpg" alt="">
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <img loading="lazy" src="assets/img/portfolio/arcturus/athena.jpg" alt="">
+                    </div>
+    
+
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h3>Hardware</h3>
+                <p>We decided to make a back mounting surface out of 3'x5' plywood. After applying several coats of wipe-on polyeurathane finish, we mounted some off-the-shelf hooks for our
+                   helmets, skateboard mounts, and the pegboard. We used two collapsible shelf brackets and another piece of plywood to create a collapsible work surface. Finally, we mounted the whole 
+                   thing to the side of our garage by first drilling out the concrete with a masonry bit, then using conrete anchors to secure it to the wall.
+                </p>
+                <h3>Electronics</h3>
+                <p>The electronics are driven by an Arduino Nano, which takes in I2C communcation from two color sensors mounted on each skateboard's charging brick. If the LED indicator on the charging brick 
+                  is red, that indicates that the board is charging but isn't fully charged. If it's green, it's fully charged or not plugged in. The Arduino then sends the corresponding RGB signal to the corresponding 
+                  side of addressable RGB LED strip, which has its own power supply to minimize current draw from the Arduino. This entire assembly is consolidated onto a single protoboard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
